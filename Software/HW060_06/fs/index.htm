@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<link rel="stylesheet" type="text/css" href="/style.css">
+<!-- Copyright (c) 2009-2010 Texas Instruments Incorporated.  All rights reserved. -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>Main</title>
+<style type="text/css">
+body
+{
+font-family: Arial;
+background-color: white;
+margin: 10px;
+padding: 0px
+}
+h1
+{
+color: #7C7369;
+font-family: Arial;
+font-size: 24pt;
+font-style: italic;
+}
+h2
+{
+color: #000000;
+font-family: Arial;
+font-size: 18pt;
+font-style: bold;
+}
+h3
+{
+color: #7C7369;
+font-family: Arial;
+font-size: 12pt;
+font-style: bold;
+}
+</style>
+</head>
+<body onLoad="ledstateGet();pwmstateGet();pwmfreqGet();pwmdutycycleGet();">
+<table width="348" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1" valign="bottom"><table width="714" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="96" rowspan="2" valign="bottom"><img src="images/logo.gif" alt=""></td>
+        <td width="100%" align="right"><p class="head_text">Тел: (093)6875601<br>
+          E-mail: <a href="mailto:info@east-labs.com">info@celse.in.ua</a></p></td>
+      </tr>
+      <tr>
+        <td><table width="335" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="31"><a href="index_en.html"><img src="images/en.gif" alt="English version" width="29" height="27" border="0"></a></td>
+            <td width="36"><a href="index.html"><img src="images/ru.gif" alt="Русская версия" width="36" height="27" border="0"></a></td>
+            <td width="268"><strong>Кельс CV060 контроллер</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>  
+</table>
+<table width="713" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="22%" align="left" valign="top" bgcolor="#00CC00">
+<ul>
+  <br>
+  <li><a href="index.htm">Главная</a></li>
+  <li> <a href="io.htm">Ввод/Вывод</a></li>
+  <li><a href="regs.htm">Регистры</a></li>
+  <li><a href="console.htm">Консоль</a></li>
+  <li><a href="error.htm">Ошибки</a></li>
+  <li><a href="ip.htm">Сеть</a>   
+</li>
+</a></li>
+</ul>
+</td>
+<td width="78%" align="center" valign="top" bgcolor="#FFFFFF" background="images\pritochk.gif" >
+<table width="555" >
+  <tbody>
+  <tr>
+	  <td width="60">&nbsp;</td>
+      <td width="50">&nbsp;</td>
+      <td width="30">&nbsp;</td>
+      <td width="80">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td width="90">&nbsp;</td>
+      <td width="60">&nbsp;</td>
+      <td width="70">&nbsp;</td>
+  </tr>
+  <tr>
+	  <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td nowrap><div id="AI_04" align="center" style="color:#F00"><strong>+40.0C</strong></div></td>
+  </tr>
+    <tr>
+	  <td></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td nowrap><div id="AI_0" align="center" style="color:#00F"><strong>34.0%</strong></div></td>
+  </tr>
+   <tr>
+	  <td><div id="AI_04" align="center" style="color:#F00"><strong>+40.0C</strong></div></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+   <tr>
+	  <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+   <tr>
+	  <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+  <tr>
+	  <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+  <tr>
+	  <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td></td>
+  </tr>
+   <tr>
+	  <td>&nbsp;</td>
+      <td><div id="AI_0" align="center"><strong>Откр</strong></div></td>
+      <td>&nbsp;</td>
+      <td><div id="AI_0" align="center"><strong>Ok</strong></div></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><div id="AI_0" align="center"><strong>Ok</strong></div></td>
+      <td></td>
+  </tr>
+   <tr>
+	  <td>&nbsp;</td>
+      <td></td>
+      <td>&nbsp;</td>
+      <td></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+  <tr>
+	  <td colspan="2" rowspan="2" align="center"><input id="ON_OFF" value="Включить" onClick="toggle_DO(4);" type="button"></td>
+      <td height="21">&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+  <tr>
+	  <td>&nbsp;</td>
+      <td><input id="DO_00" value="0" onClick="toggle_DO(0);" type="button"></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><div id="AI_0" align="center" style="color:#00F"><strong>34.0%</strong></div></td>
+      <td>&nbsp;</td>
+  </tr>
+  <tr>
+	  <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+  </tr>
+  </tbody>
+</table></td>
+</tr>
+</tbody>
+</table>
+<table width="713" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="22%" align="left" valign="top" bgcolor="#FFFFFF"></li></td>
+      <td width="78%" align="right" valign="middle"><blockquote>
+        <center align="center">
+          <h3 align="center">Copyright &copy; 2010-2012 Celse www.celse.in.ua</h3>
+</center>
+      </blockquote>
+<p></p></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+</body></html>

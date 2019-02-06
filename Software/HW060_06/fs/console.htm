@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<!-- Copyright (c) 2009-2010 Texas Instruments Incorporated.  All rights reserved. -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>I/O Control Demo 1</title>
+<script type="text/javascript" src="jquery.js"></script>
+<!--таймер-->
+<style>div#timer{color:#FF0000;}</style>
+<script language="javascript">	
+//-------------------------------------------------------------------------------------------
+function submitenter(e)
+{
+var keycode;
+if (window.event) keycode = window.event.keyCode;
+else if (e) keycode = e.which;
+else return true;
+
+if (keycode == 13) 
+   {
+	 //str = document.getElementById("tx").value;
+	//document.getElementById("all").innerHTML = str;	
+   //document.getElementById("all").innerHTML = "***";	
+   Message_Exchange();
+   document.getElementById("rx").value = document.getElementById("tx").value;
+   document.getElementById("oldtx").value = document.getElementById("tx").value;
+   document.getElementById("tx").value = "";
+   return false;
+   }
+if (keycode == 96) 
+   {
+  		document.getElementById("tx").value =  document.getElementById("oldtx").value;
+   return false;
+   }
+   return true;
+}
+//-------------------------------------------------------------------------------------------
+function Message_Exchange()
+{
+	var req = false;
+	var led = false;
+	str = document.getElementById("tx").value +"%0D";
+	//str = document.getElementById("tx").value;
+	function DO_Complete()
+	{
+		if(led.readyState == 4)
+		{
+			if(led.status == 200)
+			{
+				document.getElementById("rx").value  = document.getElementById("rx").value + "\r" + led.responseText;
+			}
+		}
+	}
+	if(window.XMLHttpRequest)
+	{
+		req = new XMLHttpRequest();
+		led = new XMLHttpRequest();
+	}
+	else 
+		if(window.ActiveXObject)
+		{
+			req = new ActiveXObject("Microsoft.XMLHTTP");
+			led = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	if(req)
+	{
+		req.open("GET", "/cgi-bin/console_tx"+ str + Math.random(), true);
+		req.send(null);
+	}
+	if(led)
+	{
+		led.open("GET", "/console_rx?id=" + Math.random(), true);
+		led.onreadystatechange = DO_Complete;
+		led.send(null);
+	}
+}
+//-------------------------------------------------------------------------------------------
+function check()
+{
+	document.getElementById("all").innerHTML = "***";	
+}
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+//-->
+</script>
+<style type="text/css">
+body
+{
+	font-family: Arial;
+	background-color: white;
+	margin: 10px;
+	padding: 0px;
+	white-space: normal;
+}
+h1
+{
+color: #7C7369;
+font-family: Arial;
+font-size: 24pt;
+font-style: italic;
+}
+h2
+{
+color: #000000;
+font-family: Arial;
+font-size: 18pt;
+font-style: bold;
+}
+h3
+{
+color: #7C7369;
+font-family: Arial;
+font-size: 12pt;
+font-style: bold;
+}
+</style> 
+</head>
+<body onLoad="">
+<table width="348" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1" valign="bottom"><table width="714" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="96" rowspan="2" valign="bottom"><img src="images/logo.gif" alt=""></td>
+        <td width="100%" align="right"><p class="head_text">&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td><table width="335" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="31"><a href="index_en.html"><img src="images/en.gif" alt="English version" width="29" height="27" border="0"></a></td>
+            <td width="36"><a href="index.html"><img src="images/ru.gif" alt="Русская версия" width="36" height="27" border="0"></a></td>
+            <td width="268"><strong>Celse CV060 controller</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>  
+</table>
+<table width="717" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="22%" align="left" valign="top" bgcolor="#00CC00">
+<ul>
+  <br>
+  <li><a href="index.htm">Главная</a></li>
+  <li> <a href="io.htm">Ввод/Вывод</a></li>
+  <li><a href="regs.htm">Регистры</a></li>
+  <li><a href="console.htm">Консоль</a></li>
+  <li><a href="error.htm">Ошибки</a></li>
+  <li><a href="ip.htm">Сеть</a>
+</li>
+<br>
+</a></li>
+</ul>
+</td>
+<td align="left" valign="top" width="78%">
+<center>
+<h2 align="left">Console</h2>
+</center>
+<table>
+  <tbody>
+  <tr>
+  	<td>
+  	Receive message
+  	</td>
+  </tr>
+  <tr>
+  	<td>
+  	<textarea name="a" cols="80" rows="30" readonly="readonly" wrap="physical" id="rx" ></textarea>
+  	</td>
+  </tr>
+   <tr>
+  	<td>
+  	Send message
+  	</td>
+  </tr>
+  <tr>
+  	<td>
+  	<textarea name="aa" id="tx" cols="80" rows="5"  wrap="physical" onKeyPress="return submitenter(event);"></textarea>
+  	</td>
+  </tr>
+   <tr>
+  	<td><textarea name="aa2" cols="80" id="oldtx"></textarea>
+  	</td>
+  </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="716" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="22%" align="left" valign="top" bgcolor="#FFFFFF"></li></td>
+      <td width="78%" align="right" valign="middle"><blockquote>
+        <center align="center">
+          <h3 align="center">Copyright &copy; 2010-2012 Celse www.celse.in.ua</h3>
+        </center>
+      </blockquote>
+        <p></p></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+</body></html>

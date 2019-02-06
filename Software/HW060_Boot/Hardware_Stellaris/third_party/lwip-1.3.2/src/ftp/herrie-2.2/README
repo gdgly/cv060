@@ -1,0 +1,134 @@
+Hello and thanks for downloading Herrie!
+
+This document will discuss a small set of subjects that will help you
+install and use Herrie, but also ways to contact the developers to
+report bugs and such.
+
+- What is Herrie?
+- How should I pronounce it?
+- What kind of platforms will it run on?
+- What are the dependencies of Herrie?
+- How do I compile and install Herrie?
+- I've installed it - now what?
+- How do I contact you (report bugs, ask questions, etc)?
+
+What is Herrie?
+~~~~~~~~~~~~~~~
+Herrie is a minimalistic music player that uses the command line. It is
+written to support a variety of operating systems, audio subsystems and
+file formats, including playlists.
+
+Herrie has a split-screen user interface, with a playlist at the top of
+the screen and a file browser at the bottom. When tracks are added to
+the playlist, Herrie automatically consumes them one by one. It is thus
+an application that allows you to batch music for playback.
+
+How should I pronounce it?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+Herrie is actually a Dutch word. Its meaning is similar to the English
+word 'clamour' (loud noise). Just pronounce it as the English given name
+'Harry' and you are a long way.
+
+What kind of platforms will it run on?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Herrie should compile without a flaw on the following operating systems:
+
+- Cygwin
+- FreeBSD
+- Linux
+- Mac OS X (Darwin)
+- NetBSD
+- OpenBSD
+- Solaris
+
+The application has been tested on little and big endian platforms, so
+the chances are high it should just work on your obscure hardware as
+well. At least Intel x86, SPARC and PowerPC should work.
+
+What are the dependencies of Herrie?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Herrie is written in C and uses a lot of functions found in the GLib
+library. It also uses some libraries for audio decompression and such.
+Below is a list of libraries you should install prior to compiling
+Herrie:
+
+- gettext (NLS, optional)
+- glib
+- libasound (ALSA, optional)
+- libao (AO, optional)
+- libcurl (HTTP and AudioScrobbler, optional)
+- libid3tag (MP3, optional)
+- libmad (MP3, optional)
+- libmodplug (optional)
+- libsndfile (optional)
+- libspiff (XSPF support, requires 0.6.3 or higher, optional)
+- libvorbisfile (optional)
+- ncursesw, ncurses or pdcurses (`XCurses')
+- pulseaudio (optional)
+
+All optional dependencies can be disabled using the corresponding
+switches below. On Debian-like systems, make sure to install all the
+appropriate -dev packages.
+
+How do I compile and install Herrie?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Herrie ships with a shellscript called `configure' which generates a
+Makefile for your specific system. Arguments can be passed to the
+configure script to change certain parameters:
+
+- no_http       Disable support for HTTP audio streams
+- no_modplug    Disable libmodplug linkage
+- no_mp3        Disable MP3 audio file support
+- no_nls        Disable native language support
+- no_scrobbler  Disable AudioScrobbler support
+- no_sndfile    Disable libsndfile linkage (Wave/FLAC support)
+- no_vorbis     Disable Ogg Vorbis support
+- no_xspf       Disable XSPF (`Spiff') playlist support
+
+- alsa          Use ALSA audio output
+- ao            Use libao audio output
+- coreaudio     Use Apple's CoreAudio audio output
+- oss           Use Open Sound System output
+- null          Use placeholder audio output
+- pulse         Use PulseAudio audio output
+
+- ncurses       Use ncurses instead of ncursesw (breaks UTF-8 support)
+- xcurses       Build application against XCurses (PDCurses)
+
+- no_strip      Don't strip the application binary on installation
+- debug         Build with assertions and debug symbols
+- strict        Turn on stricter compiler flags for GCC
+- verbose       Print commands during compilation
+
+There are also some environment variables which also have influence on
+the generated Makefile:
+
+- CC            C compiler
+- CFLAGS        Prepend compiler flags
+- LDFLAGS       Prepend linkage flags
+- LINGUAS       Only install certain languages
+- INSTALL       install(1) application used by `make install'
+- CONFDIR       Change configuration file directory
+- MANDIR        Change Manual page directory
+- OS            Override operating system detection (for cross compilation)
+- PREFIX        Change installation prefix
+
+After running `./configure', a simple `make; make install' will suffice.
+When the DESTDIR variable is set during installation, its contents will
+be prepended to the PREFIX. It is also possible to run the `configure'
+script from a different directory, which causes all generated data to be
+stored in that directory.
+
+I've installed it - now what?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Herrie also comes with a manual page. The manual page contains some more
+information about its basic usage and a list of configuration file
+switches and keyboard bindings. Please take a look at it.
+
+How do I contact you (report bugs, ask questions, etc)?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+When something goes wrong or when you have something to tell us, you can
+contact us on IRC, but also by email. Please visit our website to obtain
+more information on how to contact us:
+
+	http://herrie.info/

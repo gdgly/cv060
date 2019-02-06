@@ -1,0 +1,7 @@
+1. Remove I2C from any object exept FRAM
+2. Move FRAM closer to CPU
+3. Use new SOIC8 optocouples
+4. ADD SPI with optoisolators and diff tranceivers to external connector and indication board
+5. Remove SD connector
+6. Add protection to relays
+7. Add potection to AO 

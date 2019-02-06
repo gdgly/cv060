@@ -1,0 +1,247 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: herrie\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 18:16+0200\n"
+"PO-Revision-Date: 2007-12-06 20:28+0100\n"
+"Last-Translator: Ed Schouten <ed@80386.nl>\n"
+"Language-Team: Ed Schouten <ed@80386.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: audio_output_alsa.c:151 audio_output_ao.c:116 audio_output_coreaudio.c:199
+#: audio_output_pulse.c:77
+msgid "Cannot open the audio device."
+msgstr "Kan het geluidsapparaat niet openen."
+
+#: audio_output_alsa.c:169 audio_output_coreaudio.c:226 audio_output_oss.c:123
+msgid "Sample rate or amount of channels not supported."
+msgstr "Sample rate of aantal kanalen wordt niet ondersteund."
+
+#: audio_output_oss.c:72
+#, c-format
+msgid "Cannot open audio device \"%s\".\n"
+msgstr "Kan geluidsapparaat \"%s\" niet openen.\n"
+
+#: gui_browser.c:79
+msgid "filter"
+msgstr "filter"
+
+#: gui_browser.c:145
+msgid "Unable to open initial directory."
+msgstr "Opstartmap openen mislukt."
+
+#: gui_browser.c:252
+msgid "Unable to enter the parent directory."
+msgstr "Naar een hogere map gaan mislukt."
+
+#: gui_browser.c:284
+msgid "Unable to enter the selected directory."
+msgstr "Naar de geselecteerde map gaan mislukt."
+
+#: gui_browser.c:370
+msgid "Change directory"
+msgstr "Verplaats van map"
+
+#: gui_browser.c:408
+msgid "Unable to display the file or directory."
+msgstr "Het weergeven van het bestand of de map mislukt."
+
+#: gui_browser.c:425
+msgid "Write playlist to file"
+msgstr "Schrijf afspeellijst naar bestand"
+
+#: gui_browser.c:434
+msgid "Unable to write playlist."
+msgstr "Het wegschrijven van de afspeellijst mislukt."
+
+#: gui_input.c:104
+msgid "Use kill(1) to quit."
+msgstr "Gebruik kill(1) om af te sluiten."
+
+#: gui_input.c:108
+#, c-format
+msgid "Quit %s?"
+msgstr "%s afsluiten?"
+
+#: gui_input.c:192
+msgid "Search for"
+msgstr "Zoeken naar"
+
+#: gui_input.c:198
+msgid "Bad pattern."
+msgstr "Ongeldig patroon."
+
+#: gui_input.c:245 gui_input.c:282
+msgid "Not found."
+msgstr "Niet gevonden."
+
+#: gui_input.c:358
+msgid "Jump to position"
+msgstr "Spring naar positie"
+
+#: gui_input.c:414
+msgid "Bad time format."
+msgstr "Ongeldig tijdformaat."
+
+#: gui_input.c:612 main.c:75 main.c:81 main.c:87
+msgid "yes"
+msgstr "ja"
+
+#: gui_input.c:613 main.c:77 main.c:83 main.c:89
+msgid "no"
+msgstr "nee"
+
+#: gui_playq.c:109
+msgid "Idle"
+msgstr "Inactief"
+
+#: gui_playq.c:112
+msgid "Paused"
+msgstr "Gepauzeerd"
+
+#: gui_playq.c:114
+msgid "Playing"
+msgstr "Afspelen"
+
+#: gui_playq.c:352
+msgid "Remove all songs from the playlist?"
+msgstr "Alle nummers uit de afspeellijst verwijderen?"
+
+#: gui_playq.c:363
+msgid "Randomize the playlist?"
+msgstr "De afspeellijst willekeurig sorteren?"
+
+#: gui_playq.c:412 gui_playq.c:450
+msgid "The song is already at the top of the playlist."
+msgstr "Het nummer is al aan de bovenkant van de afspeellijst."
+
+#: gui_playq.c:431 gui_playq.c:469
+msgid "The song is already at the bottom of the playlist."
+msgstr "Het nummer is al aan de onderkant van de afspeellijst."
+
+#: gui_playq.c:526
+msgid "Failed to adjust the volume."
+msgstr "Bijstellen van het volume mislukt."
+
+#: gui_playq.c:528
+#, c-format
+msgid "Volume: %d%%"
+msgstr "Volume: %d%%"
+
+#: gui_vfslist.c:264
+msgid "There are no songs."
+msgstr "Er zijn geen nummers."
+
+#: gui_vfslist.c:335
+msgid "You are at the first song."
+msgstr "Je bent bij het eerste nummer."
+
+#: gui_vfslist.c:360
+msgid "You are at the last song."
+msgstr "Je bent bij het laatste nummer."
+
+#: gui_vfslist.c:586
+msgid "Search wrapped to top."
+msgstr "Zoekopdracht naar boven verplaatst."
+
+#: gui_vfslist.c:610
+msgid "Full pathname"
+msgstr "Volledige bestandsnaam"
+
+#: main.c:71
+msgid "Global configuration file"
+msgstr "Globale configuratiebestand"
+
+#: main.c:72
+msgid "Audio output"
+msgstr "Geluidsuitvoer"
+
+#: main.c:73
+msgid "Support for AudioScrobbler"
+msgstr "Ondersteuning voor AudioScrobbler"
+
+#: main.c:79
+msgid "Support for HTTP streams"
+msgstr "Ondersteuning voor HTTP streams"
+
+#: main.c:85
+msgid "Support for XSPF playlists (`spiff')"
+msgstr "Ondersteuning voor XSPF afspeellijsten (`spiff')"
+
+#: main.c:91
+msgid "Supported audio file formats"
+msgstr "ondersteunde geluidsformaten"
+
+#: main.c:103
+msgid "usage"
+msgstr "gebruik"
+
+#: playq.c:195
+#, c-format
+msgid "Failed to open \"%s\" for playback."
+msgstr "Openen voor afspelen van \"%s\" mislukt."
+
+#: playq.c:426
+#, c-format
+msgid "Repeat: %s"
+msgstr "Herhaling: %s"
+
+#: playq.c:427
+msgid "on"
+msgstr "aan"
+
+#: playq.c:427
+msgid "off"
+msgstr "uit"
+
+#: scrobbler.c:483
+msgid "Failed to authorize at AudioScrobbler."
+msgstr "Authoriseren bij AudioScrobbler mislukt."
+
+#: scrobbler.c:487
+msgid "Invalid AudioScrobbler username/password."
+msgstr "Ongeldige AudioScrobbler gebruikersnaam/wachtwoord."
+
+#: scrobbler.c:492
+msgid "Successfully authorized at AudioScrobbler."
+msgstr "Succesvol geauthoriseerd bij AudioScrobbler."
+
+#: scrobbler.c:509
+msgid "Successfully sent 1 song to AudioScrobbler."
+msgstr "Succesvol 1 nummer opgestuurd naar AudioScrobbler."
+
+#: scrobbler.c:513
+#, c-format
+msgid "Successfully sent %d songs to AudioScrobbler."
+msgstr "Succesvol %d nummers opgestuurd naar AudioScrobbler."
+
+#: scrobbler.c:519
+msgid "Failed to submit songs to AudioScrobbler."
+msgstr "Nummers opsturen naar AudioScrobbler mislukt."
+
+#: vfs.c:202
+#, c-format
+msgid "Unknown user: %s\n"
+msgstr "Onbekende gebruiker: %s\n"
+
+#: vfs.c:216
+#, c-format
+msgid "Unable to chroot in %s\n"
+msgstr "Onmogelijk om te chroot'en naar %s\n"
+
+#: vfs.c:225
+#, c-format
+msgid "Unable to change to group %d\n"
+msgstr "Onmogelijk om naar groep %d te veranderen\n"
+
+#: vfs.c:229
+#, c-format
+msgid "Unable to change to user %d\n"
+msgstr "Onmogelijk om naar gebruiker %d te veranderen\n"
+
+#: vfs_http.c:146
+#, c-format
+msgid "Connection with \"%s\" lost."
+msgstr "Verbinding met \"%s\" verloren."

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows><Window><Factory>Build</Factory></Window><Window><Factory>Find-in-Files</Factory></Window></Windows></PreferedWindows><ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1126</ColumnWidth1></Debug-Log>
+      <Build>
+        
+        
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>844</ColumnWidth1><ColumnWidth2>225</ColumnWidth2><ColumnWidth3>56</ColumnWidth3></Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>248</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        
+        
+        
+      <PreferedWindows><Position>2</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows><MixedMode>1</MixedMode><CodeCovShow>1</CodeCovShow><InstrProfShow>1</InstrProfShow><col-names><item>Disassembly</item><item>_I0</item></col-names><col-widths><item>500</item><item>20</item></col-widths><DisasmHistory/><ShowCodeCoverage>0</ShowCodeCoverage><ShowInstrProfiling>0</ShowInstrProfiling></Disassembly>
+      <Find-in-Files>
+        
+        
+        
+      <ColumnWidth0>406</ColumnWidth0><ColumnWidth1>224</ColumnWidth1><ColumnWidth2>697</ColumnWidth2></Find-in-Files>
+    <Watch><Format><struct_types/><watch_formats><Fmt><Key>{W}Watch-0:hour</Key><Value>3</Value></Fmt><Fmt><Key>{W}Watch-0:min</Key><Value>3</Value></Fmt><Fmt><Key>{W}Watch-0:year</Key><Value>3</Value></Fmt></watch_formats></Format><Column0>100</Column0><Column1>197</Column1><Column2>100</Column2><Column3>100</Column3></Watch><Locals><col-names><item>Location</item><item>Type</item><item>Value</item><item>Variable</item></col-names><col-widths><item>150</item><item>100</item><item>196</item><item>116</item></col-widths></Locals><StaticWatch><expressions><item>Tx</item><item>Rx</item><item>dirname</item><item>Params_Str</item><item>word</item><item>MenuPtr</item><item>path</item><item>ptr</item><item>ptr2</item><item>full_path</item><item>ftp_path</item><item/></expressions><col-names><item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names><col-widths><item>131</item><item>150</item><item>100</item><item>148</item></col-widths></StaticWatch><PHYSBPWIN><col-names><item>#</item><item>Breakpoint</item></col-names><col-widths><item>15</item><item>400</item></col-widths><PreferedWindows><Position>3</Position><ScreenPosX>0</ScreenPosX><ScreenPosY>0</ScreenPosY><Windows/></PreferedWindows></PHYSBPWIN></Static>
+    <Windows>
+      
+      
+      
+    <Wnd0>
+        <Tabs>
+          
+          <Tab>
+            <Identity>TabID-6858-22077</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-5673-27608</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-26370-13564</Identity><TabName>Debug Log</TabName><Factory>Debug-Log</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>2</SelectedTab></Wnd0><Wnd3>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-19698-22041</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>&lt;ws&gt;</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/FAT</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/FTP</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/Hardware</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/IO</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/MODBus</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/ModBus</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/ModBus/MODBus_1</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/ModBus/MODBus_2</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/Socket_Slave</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/Source</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/Source/Stellaris</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/Stellaris</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/Stellaris/Stellaris</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060/System</ExpandedNode><ExpandedNode>&lt;ws&gt;/enet_lwip</ExpandedNode><ExpandedNode>&lt;ws&gt;/enet_lwip/Source</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd3><Wnd4><Tabs><Tab><Identity>TabID-3903-2409</Identity><TabName>Locals</TabName><Factory>Locals</Factory></Tab><Tab><Identity>TabID-22263-2474</Identity><TabName>Live Watch</TabName><Factory>StaticWatch</Factory></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd4><Wnd5><Tabs><Tab><Identity>TabID-19333-30251</Identity><TabName>Disassembly</TabName><Factory>Disassembly</Factory><Session/></Tab></Tabs><SelectedTab>0</SelectedTab></Wnd5></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\third_party\lwip-1.3.2\apps\httpserver_raw\httpd.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\third_party\lwip-1.3.2\src\ftp\ftpd.c</Filename><XPos>0</XPos><YPos>1536</YPos><SelStart>36023</SelStart><SelEnd>36023</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_\System\main_stellaris.c</Filename><XPos>0</XPos><YPos>337</YPos><SelStart>9777</SelStart><SelEnd>9777</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_\io.c</Filename><XPos>0</XPos><YPos>363</YPos><SelStart>13010</SelStart><SelEnd>13010</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\third_party\lwip-1.3.2\src\core\tcp_in.c</Filename><XPos>0</XPos><YPos>334</YPos><SelStart>12377</SelStart><SelEnd>12377</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\third_party\lwip-1.3.2\src\core\ipv4\ip.c</Filename><XPos>0</XPos><YPos>486</YPos><SelStart>17237</SelStart><SelEnd>17237</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\third_party\lwip-1.3.2\src\netif\etharp.c</Filename><XPos>0</XPos><YPos>1201</YPos><SelStart>44985</SelStart><SelEnd>44985</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\third_party\lwip-1.3.2\ports\stellaris\netif\stellarisif.c</Filename><XPos>0</XPos><YPos>621</YPos><SelStart>18295</SelStart><SelEnd>18295</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\utils\lwiplib.c</Filename><XPos>0</XPos><YPos>464</YPos><SelStart>17356</SelStart><SelEnd>17356</SelEnd></Tab><ActiveTab>8</ActiveTab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_\System\Console\console.c</Filename><XPos>0</XPos><YPos>65</YPos><SelStart>2060</SelStart><SelEnd>2060</SelEnd></Tab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-01253450><key>iaridepm.enu1</key></Toolbar-01253450></Sizes></Row0><Row1><Sizes><Toolbar-13ce61c0><key>debuggergui.enu1</key></Toolbar-13ce61c0></Sizes></Row1></Top><Left><Row0><Sizes><Wnd3><Rect><Top>-2</Top><Left>-2</Left><Bottom>632</Bottom><Right>339</Right><x>-2</x><y>-2</y><xscreen>473</xscreen><yscreen>535</yscreen><sizeHorzCX>305951</sizeHorzCX><sizeHorzCY>530754</sizeHorzCY><sizeVertCX>220569</sizeVertCX><sizeVertCY>628968</sizeVertCY></Rect></Wnd3></Sizes></Row0></Left><Right><Row0><Sizes><Wnd4><Rect><Top>-2</Top><Left>-2</Left><Bottom>632</Bottom><Right>381</Right><x>-2</x><y>-2</y><xscreen>208</xscreen><yscreen>235</yscreen><sizeHorzCX>134541</sizeHorzCX><sizeHorzCY>233135</sizeHorzCY><sizeVertCX>247736</sizeVertCX><sizeVertCY>628968</sizeVertCY></Rect></Wnd4></Sizes></Row0><Row1><Sizes><Wnd5><Rect><Top>-2</Top><Left>379</Left><Bottom>632</Bottom><Right>579</Right><x>379</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>129366</sizeHorzCX><sizeHorzCY>198413</sizeHorzCY><sizeVertCX>129366</sizeVertCX><sizeVertCY>628968</sizeVertCY></Rect></Wnd5></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd0><Rect><Top>-2</Top><Left>-2</Left><Bottom>307</Bottom><Right>1548</Right><x>-2</x><y>-2</y><xscreen>1550</xscreen><yscreen>309</yscreen><sizeHorzCX>1002587</sizeHorzCX><sizeHorzCY>306548</sizeHorzCY><sizeVertCX>305951</sizeVertCX><sizeVertCY>530754</sizeVertCY></Rect></Wnd0></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+

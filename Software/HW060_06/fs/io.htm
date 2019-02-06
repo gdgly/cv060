@@ -1,0 +1,563 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<!-- Copyright (c) 2009-2010 Texas Instruments Incorporated.  All rights reserved. -->
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><title>I/O Control Demo 1</title>
+<script type="text/javascript" src="jquery.js"></script>
+<!--таймер-->
+<style>div#timer{color:#FF0000;}</style>
+<script language="javascript">	
+function processTimer()
+{
+  {
+    setTimeout("processTimer()",1000);
+	IO_Get();
+  } 
+}
+processTimer();
+//-------------------------------------------------------------------------------------------
+function AO_Change(num,sign,val)
+{
+	var req = false;
+	var led = false;
+	function DO_Complete()
+	{
+		if(led.readyState == 4)
+		{
+			if(led.status == 200)
+			{
+				document.getElementById("AO_"+num+"_state" ).innerHTML = "<div>" + led.responseText + "</div>";
+			}
+		}
+	}
+	if(window.XMLHttpRequest)
+	{
+		req = new XMLHttpRequest();
+		led = new XMLHttpRequest();
+	}
+	else 
+		if(window.ActiveXObject)
+		{
+			req = new ActiveXObject("Microsoft.XMLHTTP");
+			led = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	if(req)
+	{
+		req.open("GET", "/cgi-bin/change_AO_"+num+":"+sign+":"+val+"?id" + Math.random(), true);
+		req.send(null);
+	}
+	if(led)
+	{
+		led.open("GET", "/AO_"+num+"_state?id=" + Math.random(), true);
+		led.onreadystatechange = DO_Complete;
+		led.send(null);
+	}
+}
+//-------------------------------------------------------------------------------------------
+function toggle_DO(num)
+{
+	var req = false;
+	var led = false;
+//	new_num=num;
+//	if (num < 10) {new_num = "0" + num} 
+	function DO_Complete()
+	{
+		if(led.readyState == 4)
+		{
+			if(led.status == 200)
+			{
+//				document.getElementById("DO_00").value = led.responseText.substring(0,1);
+			}
+		}
+	}
+	if(window.XMLHttpRequest)
+	{
+		req = new XMLHttpRequest();
+		led = new XMLHttpRequest();
+	}
+	else 
+		if(window.ActiveXObject)
+		{
+			req = new ActiveXObject("Microsoft.XMLHTTP");
+			led = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	if(req)
+	{
+		if(document.getElementById("DO_0"+num).value=='0')
+			req.open("GET", "/cgi-bin/toggle_DO_0"+num+":1"+"?id" + Math.random(), true);
+		else
+			req.open("GET", "/cgi-bin/toggle_DO_0"+num+":0"+"?id" + Math.random(), true);
+		req.send(null);		
+	}
+	if(led)
+	{
+		led.open("GET", "/DO_0"+num+"_state?id=" + Math.random(), true);
+		led.onreadystatechange = DO_Complete;
+		led.send(null);
+	}
+}
+//-------------------------------------------------------------------------------------------
+function settime()
+{
+	var req = false;
+	var led = false;
+	ndata=new Date();
+	hours= ndata.getHours(); 
+	mins= ndata.getMinutes(); 
+	secs= ndata.getSeconds(); 
+	date= ndata.getDate();
+	mon=ndata.getMonth()+1;
+	year= ndata.getFullYear();
+	if (hours < 10) {hours = "0" + hours } 
+	if (mins < 10) {mins = "0" + mins } 
+	if (secs < 10) {secs = "0" + secs } 
+	if (date < 10) {date = "0" + date } 
+	if (mon < 10) {mon = "0" + mon} 
+	datastr =hours+":"+mins+":"+secs+":"+date+":"+mon+":"+year; 
+	document.getElementById("realtime2").innerHTML =datastr;	
+	function DO_Complete()
+	{
+		if(led.readyState == 4)
+		{
+			if(led.status == 200)
+			{
+//				document.getElementById("DO_00").value = led.responseText.substring(0,1);
+			}
+		}
+	}
+	if(window.XMLHttpRequest)
+	{
+		req = new XMLHttpRequest();
+		led = new XMLHttpRequest();
+	}
+	else 
+		if(window.ActiveXObject)
+		{
+			req = new ActiveXObject("Microsoft.XMLHTTP");
+			led = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	if(req)
+	{
+		req.open("GET", "/cgi-bin/reinit?id"+datastr+ Math.random(), true);
+		req.send(null);
+	}
+	if(led)
+	{
+		led.open("GET", "/reinit?id=" + Math.random(), true);
+		led.onreadystatechange = DO_Complete;
+		led.send(null);
+	}
+}
+//-------------------------------------------------------------------------------------------
+function store()
+{
+	var req = false;
+	var led = false;
+	function DO_Complete()
+	{
+		if(led.readyState == 4)
+		{
+			if(led.status == 200)
+			{
+			}
+		}
+	}
+	if(window.XMLHttpRequest)
+	{
+		req = new XMLHttpRequest();
+		led = new XMLHttpRequest();
+	}
+	else 
+		if(window.ActiveXObject)
+		{
+			req = new ActiveXObject("Microsoft.XMLHTTP");
+			led = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	if(req)
+	{
+		req.open("GET", "/cgi-bin/store?id"+ Math.random(), true);
+		req.send(null);
+	}
+	if(led)
+	{
+		led.open("GET", "/store?id=" + Math.random(), true);
+		led.onreadystatechange = DO_Complete;
+		led.send(null);
+	}
+}
+//-------------------------------------------------------------------------------------------
+function prog_auto_manual()
+{
+	var req = false;
+	var led = false;
+	function DO_Complete()
+	{
+		if(led.readyState == 4)
+		{
+			if(led.status == 200)
+			{
+			}
+		}
+	}
+	if(window.XMLHttpRequest)
+	{
+		req = new XMLHttpRequest();
+		led = new XMLHttpRequest();
+	}
+	else 
+		if(window.ActiveXObject)
+		{
+			req = new ActiveXObject("Microsoft.XMLHTTP");
+			led = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	if(req)
+	{
+		req.open("GET", "/cgi-bin/prog_mode?id"+ Math.random(), true);
+		req.send(null);
+	}
+	if(led)
+	{
+		led.open("GET", "/prog_mode?id=" + Math.random(), true);
+		led.onreadystatechange = DO_Complete;
+		led.send(null);
+	}
+}
+//-------------------------------------------------------------------------------------------
+function reset()
+{
+	var req = false;
+	var led = false;
+	function DO_Complete()
+	{
+		if(led.readyState == 4)
+		{
+			if(led.status == 200)
+			{
+			}
+		}
+	}
+	if(window.XMLHttpRequest)
+	{
+		req = new XMLHttpRequest();
+		led = new XMLHttpRequest();
+	}
+	else 
+		if(window.ActiveXObject)
+		{
+			req = new ActiveXObject("Microsoft.XMLHTTP");
+			led = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	if(req)
+	{
+		req.open("GET", "/cgi-bin/reset?id"+ Math.random(), true);
+		req.send(null);
+	}
+	if(led)
+	{
+		led.open("GET", "/reset?id=" + Math.random(), true);
+		led.onreadystatechange = DO_Complete;
+		led.send(null);
+	}
+}
+//-------------------------------------------------------------------------------------------
+function IO_Get()
+{
+	var led = false;
+	function IO_Complete()
+	{
+		if(led.readyState == 4)
+		{
+			if(led.status == 200)
+			{
+			
+				document.getElementById("DO_00").value = led.responseText.substring(0,1);
+				document.getElementById("DO_01").value = led.responseText.substring(1,2);
+				document.getElementById("DO_02").value = led.responseText.substring(2,3);
+				document.getElementById("DO_03").value = led.responseText.substring(3,4);
+				document.getElementById("DO_04").value = led.responseText.substring(4,5);
+				document.getElementById("DO_05").value = led.responseText.substring(5,6);
+				document.getElementById("DO_06").value = led.responseText.substring(6,7);
+				document.getElementById("DO_07").value = led.responseText.substring(7,8);
+
+				document.getElementById("DI_00").innerHTML = led.responseText.substring(10,11);			
+				document.getElementById("DI_01").innerHTML = led.responseText.substring(11,12);			
+				document.getElementById("DI_02").innerHTML = led.responseText.substring(12,13);			
+				document.getElementById("DI_03").innerHTML = led.responseText.substring(13,14);			
+				document.getElementById("DI_04").innerHTML = led.responseText.substring(14,15);			
+				document.getElementById("DI_05").innerHTML = led.responseText.substring(15,16);			
+				document.getElementById("DI_06").innerHTML = led.responseText.substring(16,17);			
+				document.getElementById("DI_07").innerHTML = led.responseText.substring(17,18);	
+//				document.getElementById("DI_07").checked = true;//led.responseText.substring(17,18);	
+
+				document.getElementById("realtime").innerHTML = led.responseText.substring(80,80+16);	
+
+				document.getElementById("AI_00").innerHTML = led.responseText.substring(20+0*6,20+1*6)+"C";	
+				document.getElementById("AI_01").innerHTML = led.responseText.substring(20+1*6,20+2*6)+"C";	
+				document.getElementById("AI_02").innerHTML = led.responseText.substring(20+2*6,20+3*6)+"C";	
+				document.getElementById("AI_03").innerHTML = led.responseText.substring(20+3*6,20+4*6)+"C";	
+				document.getElementById("AI_04").innerHTML = led.responseText.substring(20+4*6,20+5*6)+"C";	
+
+				document.getElementById("AO_00").innerHTML = led.responseText.substring(50+0*6,20+6*6)+"%";	
+				document.getElementById("AO_01").innerHTML = led.responseText.substring(50+1*6,20+7*6)+"%";	
+				document.getElementById("AO_02").innerHTML = led.responseText.substring(50+2*6,20+8*6)+"%";	
+				
+				if(led.responseText.substring(97)=='0')
+					document.getElementById("ProgramMode").value = "Programm Auto";	
+				else
+					document.getElementById("ProgramMode").value = "Programm Manual";	
+				document.getElementById("all").innerHTML = led.responseText;	
+			}
+		}
+	}
+	if(window.XMLHttpRequest)
+	{
+		led = new XMLHttpRequest();
+	}
+	else if(window.ActiveXObject)
+	{
+		led = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	if(led)
+	{
+		led.open("GET", "/DIO_state?id=" + Math.random(), true);
+		led.onreadystatechange = IO_Complete;
+		led.send(null);
+	}
+}
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------
+//-->
+</script>
+<style type="text/css">
+body
+{
+font-family: Arial;
+background-color: white;
+margin: 10px;
+padding: 0px
+}
+h1
+{
+color: #7C7369;
+font-family: Arial;
+font-size: 24pt;
+font-style: italic;
+}
+h2
+{
+color: #000000;
+font-family: Arial;
+font-size: 18pt;
+font-style: bold;
+}
+h3
+{
+color: #7C7369;
+font-family: Arial;
+font-size: 12pt;
+font-style: bold;
+}
+</style> 
+</head>
+<body onLoad="IO_Get();">
+<table width="348" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1" valign="bottom"><table width="714" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="96" rowspan="2" valign="bottom"><img src="images/logo.gif" alt=""></td>
+        <td width="100%" align="right"><p class="head_text">&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td><table width="335" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="31"><a href="index_en.html"><img src="images/en.gif" alt="English version" width="29" height="27" border="0"></a></td>
+            <td width="36"><a href="index.html"><img src="images/ru.gif" alt="Русская версия" width="36" height="27" border="0"></a></td>
+            <td width="268"><strong>Celse CV060 controller</strong></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>  
+</table>
+<table width="717" border="0" align="center" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td width="22%" align="left" valign="top" bgcolor="#00CC00">
+<ul>
+  <br>
+  <li><a href="index.htm">Главная</a></li>
+  <li> <a href="io.htm">Ввод/Вывод</a></li>
+  <li><a href="regs.htm">Регистры</a></li>
+  <li><a href="console.htm">Консоль</a></li>
+  <li><a href="error.htm">Ошибки</a></li>
+  <li><a href="ip.htm">Сеть</a>
+</li>
+<br>
+</a></li>
+</ul>
+</td>
+<td align="left" valign="top" width="78%">
+<center>
+<h2 align="left">Порты ввода/вывода</h2>
+</center>
+<table>
+  <tbody>
+<tr>
+<td><strong>Время</strong></td>
+<td><div id="realtime" align="left">-</div> </td>
+</tr>
+</tbody>
+</table>
+<strong>Цифровые выходы DO[xx]</strong>
+<table>
+  <tbody>
+  <tr>
+  <td>DO[00]:</td>
+  <td><input id="DO_00" value="0" onClick="toggle_DO(0);" type="button"></td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td>DO[04]:</td>
+  <td><input id="DO_04" value="0" onClick="toggle_DO(4);" type="button"></td>
+  </tr>
+  <tr>
+  <td>DO[01]:</td>
+  <td><input id="DO_01" value="0" onClick="toggle_DO(1);" type="button"></td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td>DO[05]:</td>
+  <td><input id="DO_05" value="0" onClick="toggle_DO(5);" type="button"></td>
+  </tr>
+  <tr>
+  <td>DO[02]:</td>
+  <td><input id="DO_02" value="0" onClick="toggle_DO(2);" type="button"></td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td>DO[06]:</td>
+  <td><input id="DO_06" value="0" onClick="toggle_DO(6);" type="button"></td>
+  </tr>
+  <tr>
+  <td>DO[03]:</td>
+  <td><input id="DO_03" value="0" onClick="toggle_DO(3);" type="button"></td>
+  <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+  <td>DO[07]:</td>
+  <td><input id="DO_07" value="0" onClick="toggle_DO(7);" type="button"></td>
+  </tr>
+  </tbody>
+</table>
+<strong>Цифровые входы DI[xx]</strong>
+<table>
+  <tbody>
+    <tr>
+      <td>DI [00]:</td>
+      <td><div id="DI_00" align="center"> - </div></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>DI [04]:</td>
+      <td><div id="DI_04" align="center"> - </div></td>
+      </tr>
+    <tr>
+      <td>DI [01]:</td>
+      <td><div id="DI_01" align="center"> - </div></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>DI [05]:</td>
+      <td><div id="DI_05" align="center"> - </div></td>
+      </tr>
+    <tr>
+      <td>DI [02]:</td>
+      <td><div id="DI_02" align="center"> - </div></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>DI [06]:</td>
+      <td><div id="DI_06" align="center"> - </div></td>
+      </tr>
+    <tr>
+      <td>DI [03]:</td>
+      <td><div id="DI_03" align="center"> - </div></td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>DI [07]:</td>
+      <td><div id="DI_07" align="center"> - </div></td>
+      </tr>
+    </tbody>
+</table>
+<strong>Аналоговые входы AI[xx]</strong> 
+<table>
+  <tbody>
+    <tr>
+      <td>AI [00]:</td>
+      <td><div id="AI_00" align="right"> - </div></td>
+      </tr>
+    <tr>
+      <td>AI [01]:</td>
+      <td><div id="AI_01" align="right"> - </div></td>
+      </tr>
+    <tr>
+      <td>AI [02]:</td>
+      <td><div id="AI_02" align="right"> - </div></td>
+      </tr>
+    <tr>
+      <td>AI [03]:</td>
+      <td><div id="AI_03" align="right"> - </div></td>
+      </tr>
+    <tr>
+      <td>AI [04]:</td>
+      <td><div id="AI_04" align="right"> - </div></td>
+      </tr>      
+  </tbody>
+</table>
+<strong>Аналоговые выходы AO[xx]</strong> 
+<table>
+  <tbody>
+    <tr>
+      <td>AO[00]:</td>
+      <td><div id="AO_00" align="right"> - </div></td>
+      <td><input id="AO_00_Plus" value="-" onClick="AO_Change(0,1,10);" type="button"></td>
+      <td><input id="AO_00_Minus" value="+" onClick="AO_Change(0,0,10);" type="button"></td>      
+    </tr>
+    <tr>
+      <td>AO[01]:</td>
+      <td><div id="AO_01" align="right"> - </div></td>
+      <td><input id="AO_01_Plus" value="-" onClick="AO_Change(1,1,10);" type="button"></td>
+      <td><input id="AO_01_Minus" value="+" onClick="AO_Change(1,0,10);" type="button"></td>      
+    </tr>
+    <tr>
+      <td>AO[02]:</td>
+      <td><div id="AO_02" align="right"> - </div></td>
+      <td><input id="AO_02_Plus" value="-" onClick="AO_Change(2,1,10);" type="button"></td>
+      <td><input id="AO_02_Minus" value="+" onClick="AO_Change(2,0,10);" type="button"></td>      
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tbody>
+  <tr>
+  <td><input id="SetTime" value="Set Time" onClick="settime();" type="button"></td>
+  <td><input id="StoreParam" value="Store params" onClick="store();" type="button"></td>
+  <td><input id="ProgramMode" value="Program Auto" onClick="prog_auto_manual();" type="button"></td>
+  <td><input id="Reset" value="Reset" onClick="reset();" type="button"></td>
+  </tr>
+  </tbody>
+</table>
+<div id="realtime2" align="left">-</div>
+<p>&nbsp;</p>
+<form name="form1" method="post" action="">
+  <label>
+    <textarea name="all" id="all" cols="45" rows="5"></textarea>
+  </label>
+</form>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table width="716" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td width="22%" align="left" valign="top" bgcolor="#FFFFFF"></li></td>
+      <td width="78%" align="right" valign="middle"><blockquote>
+        <center align="center">
+          <h3 align="center">Copyright &copy; 2010-2012 Celse www.celse.in.ua</h3>
+        </center>
+      </blockquote>
+        <p></p></td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+</body></html>

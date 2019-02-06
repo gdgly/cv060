@@ -1,0 +1,1 @@
+makefsfile -i fs -o io_fsdata.h -r -h

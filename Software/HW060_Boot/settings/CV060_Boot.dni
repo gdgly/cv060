@@ -1,0 +1,52 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=101296331
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[CallStackLog]
+Enabled=0
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Bp0=_ 0 "EMUL_CODE" "0x00011C00" 0 0 1 "" 0 "" 0
+Bp1=_ 1 "EMUL_CODE" "{$PROJ_DIR$\System\Service\plm.c}.284.2" 0 0 1 "" 0 "" 0
+Bp2=_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\Hardware_Stellaris\EL\functions.c}.237.1" 0 0 1 "" 0 "" 0
+Bp3=_ 1 "EMUL_CODE" "{$PROJ_DIR$\System\Service\plm.c}.972.2" 0 0 1 "" 0 "" 0
+Count=4
+[Aliases]
+A0=_ "C:\cygwin\sandbox\DriverLib\build\DriverLib.test\driverlib\adc.c" ""
+A1=_ "C:\cygwin\sandbox\DriverLib\build\DriverLib.test\driverlib\ethernet.c" ""
+A2=_ "C:\cygwin\sandbox\DriverLib\build\DriverLib.test\driverlib\pwm.c" ""
+A3=_ "C:\cygwin\sandbox\DriverLib\build\DriverLib.test\driverlib\sysctl.c" ""
+A4=_ "C:\cygwin\sandbox\DriverLib\build\DriverLib.test\driverlib\uart.c" ""
+A5=_ "C:\cygwin\sandbox\DriverLib\build\DriverLib.test\driverlib\watchdog.c" ""
+Count=6
+SuppressDialog=1
+[JLinkDriver]
+WatchCond=_ 0
+Watch0=_ 0 "" 0 "" 0 "" 0 "" 0 0 0 0
+Watch1=_ 0 "" 0 "" 0 "" 0 "" 0 0 0 0

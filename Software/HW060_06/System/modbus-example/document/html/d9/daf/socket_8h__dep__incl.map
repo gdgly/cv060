@@ -1,0 +1,5 @@
+base referer
+rect $da/d19/mbtcp_8h.html 237,32 416,59
+rect $d5/df8/socket_8c.html 237,83 416,109
+rect $d2/dc1/mbtcp_8c.html 540,7 719,33
+rect $d9/d00/simple-mbgateway_8c.html 465,57 793,84

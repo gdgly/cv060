@@ -1,0 +1,5 @@
+base referer
+rect $d0/d3e/mbserial_8h.html 232,32 424,59
+rect $d8/d90/serial_8c.html 241,83 415,109
+rect $db/da4/mbserial_8c.html 541,7 733,33
+rect $d9/d00/simple-mbgateway_8c.html 473,57 801,84

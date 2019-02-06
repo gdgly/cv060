@@ -1,0 +1,92 @@
+//------------------------------------------------------------------------------
+// Sourse EL programmable controller V031
+//------------------------------------------------------------------------------
+#ifndef __MAIN_H
+#define __MAIN_H
+//------------------------------------------------------------------------------
+#include "Misc\types.h"
+#include "defines.h"
+#include <string.h>
+#ifdef __ATMEL
+	#include "..\Hardware_Atmel\functions.h"
+	#include "..\Hardware_Atmel\lcd.h"
+	#include "..\Hardware_Atmel\io.h"
+	#include "..\Hardware_Atmel\I2C\i2c.h"
+#endif
+
+#ifdef __SIMULATOR
+//	#include <vcl.h>
+//	#pragma hdrstop
+//	#include "..\Debugger\Unit1.h"
+//	
+        
+	#include "..\Hardware_Simulator\functions.h"
+	#include "..\Hardware_Simulator\lcd.h"
+	#include "..\Hardware_Simulator\io.h"
+	#include "..\Hardware_Simulator\I2C\i2c.h"
+#endif
+
+#include "Console\console.h"
+#include "Console\str.h"
+#include "Timer\timer16.h"
+#include "Memory\fram31xx.h"
+#include "Memory\eep.h"
+#include "Pid\pid.h"
+#include "Compiler\Compiler.h"
+//#include "Misc\defines.h"
+#include "IO\adc.h"
+
+#ifdef __HW031
+#include "..\Custom\HW031\Hardware\pinout.h"
+#endif
+
+#include "Xmodem\xmodem.h"
+#include "Service\plm.h"
+#include "Misc\header.h"
+
+#include "Misc\crc.h"
+#include "LCD_Menu\menu.h"
+
+//#include "crc_modbus.h"
+//#include "math.h"
+//#include "can.h"
+//#include <ctype.h>
+#include "Service\errors.h"
+#include "RS485_Slave\uart_misc.h"
+#include "RS485_Slave\uart_protocol.h"
+//#include "protection.h"
+//------------------------------------------------------------------------------
+//#define _SEASON_DATE
+//------------------------------------------------------------------------------
+typedef struct
+{
+	TIO io;
+	TPID pid[NUM_PID];	
+	TInterpretatorRegisters intr;
+	TErrors errors;	
+}TController;
+extern TController CV;
+//------------------------------------------------------------------------------
+extern in_flash u8	mdic[5][80];
+//------------------------------------------------------------------------------
+eu8 Cycle;
+eu16 Error_Code;
+//extern TParam DevParams;
+eu8 Flag;
+eu8 Test_Mode;
+eu8 st_param;
+//-----------------------------------------------------------------------------------
+//extern TIO io;
+//extern TPID pid[NUM_PID];	
+//extern TInterpretatorRegisters intr;
+//extern TErrors errors;
+//------------------------------------------------------------------------------
+void params_store();
+void params_load();
+void cycle_handler();
+void task_handler(u8 Command, u16 Parameter);
+void Immediately_DO();
+void idle();
+void init();
+//------------------------------------------------------------------------------
+#endif

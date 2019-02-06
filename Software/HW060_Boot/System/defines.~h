@@ -1,0 +1,237 @@
+#ifndef _DEFINES_H_
+#define _DEFINES_H_
+//------------------------------------------------------------------------------
+#include "Misc\types.h"
+//------------------------------------------------------------------------------
+#define __HW031
+//------------------------------------------------------------------------------
+#define __SIMULATOR
+//#define __ATMEL
+//#define __RENESAS
+//------------------------------------------------------------------------------
+//#define __DEBUG
+#define __RELEASE
+//#define __NO_FRAM
+//#define __NO_ADC
+//------------------------------------------------------------------------------
+#define CPU_CLOCK 11059200L
+//------------------------------------------------------------------------------
+#define	Err_NO						0x0000
+#define	Err_BAD_EEPROM_RECORD		0x0001
+//------------------------------------------------------------------------------
+#define SYS_SET_UP_PERIOD	2000
+//------------------------------------------------------------------------------
+// for 11.0592 MHz
+//------------------------------------------------------------------------------
+#define UART_BaudRate_2400     287
+#define UART_BaudRate_4800     143
+#define UART_BaudRate_9600     71
+#define UART_BaudRate_14400    47
+#define UART_BaudRate_19200    35
+#define UART_BaudRate_28800    23
+#define UART_BaudRate_38400    17
+#define UART_BaudRate_57600    11
+#define UART_BaudRate_115200   5
+//------------------------------------------------------------------------------
+#ifdef __HW031
+	#define NUM_DIN		6
+	#define NUM_DOUT	5
+	#define NUM_AIN		4
+	#define NUM_AOUT	2
+#endif
+//------------------------------------------------------------------------------
+#ifdef __SIMULATOR
+	#define NUM_DIN		6
+	#define NUM_DOUT	5
+	#define NUM_AIN		4
+	#define NUM_AOUT	2
+#endif
+//------------------------------------------------------------------------------
+#define CONSOLE_BOUNDRATE 	38400
+#define RS485_BOUNDRATE 	38400
+//------------------------------------------------------------------------------
+#define ADC_MAX_NUM			4
+#define ADC_FILTER_TAPS		32
+#define ADC_SAMPLES_TIME	20		// 10ms
+//------------------------------------------------------------------------------
+#define NUM_PID			4
+//------------------------------------------------------------------------------
+#define MAX_ERRORS_NUM	5
+//------------------------------------------------------------------------------
+#define Ok   1
+#define None 0
+#define Err -1
+//------------------------------------------------------------------------------
+#define ERRORS_I2C      -450
+//------------------------------------------------------------------------------
+//typedef ulint                   t_ticks;
+//#define mat_t_ticks             0xffffffffU
+#define  sptr          (char in_flash *)
+#define  vptr          (void in_flash *)
+
+#define in_flash  __farflash
+#define BOOTFLASH __farflash
+#define APPFLASH  __farflash
+//------------------------------------------------------------------------------
+#define Bit(n)           (1 << n)
+#define SetBit(addr,n)   (addr |=  (1 << n))
+#define ClearBit(addr,n) (addr &= ~(1 << n))
+#define CheckBit(addr,n) (addr &   (1 << n))
+//------------------------------------------------------------------------------
+#define  ledSys(f)     (f?SetBit(DDRF,0):ClearBit(DDRF,0))
+//------------------------------------------------------------------------------
+#undef   max
+#define  max(a,b)       (((a) > (b)) ? (a) : (b))
+#undef   min
+#define  min(a,b)       (((a) < (b)) ? (a) : (b))
+//------------------------------------------------------------------------------
+typedef enum {
+  eSw_On,
+  eSw_Off,
+  eSw_Unknown
+} E_ON_OFF;
+//------------------------------------------------------------------------------
+// Timers
+//------------------------------------------------------------------------------
+typedef struct
+{
+	u8	Second;
+	u8	Minute;	
+	u8	Hour;	
+	u8	Day;	
+	u8	Date;	
+	u8 	Month;	
+	u8	Year;	
+}TTimeFields;
+typedef union
+{
+	TTimeFields field;
+	u8	data[7];
+}TCTime;
+//------------------------------------------------------------------------------
+// IO definitions
+//------------------------------------------------------------------------------
+typedef struct
+{
+	u8 num_di;
+	u8 num_do;
+	u8 num_ai;
+	u8 num_ao;
+				
+	u32	din;
+	u32 dout;
+	u16 aoutput[NUM_AOUT];	
+	s16 ainput[NUM_AIN];
+	f32 ao_coff[NUM_AOUT];	
+	f32 ai_coff[NUM_AIN];	
+	s16 ai_offset[NUM_AIN];		
+//	u8 ai_type[NUM_AIN];			
+//	s16 tmp;
+}TIO;
+//TIO_Static;
+//------------------------------------------------------------------------------
+typedef struct
+{
+	u32	din;
+	u32 dout;
+	u16 aoutput[NUM_AOUT];	
+	s16 ainput[NUM_AIN];
+}TIO_Dinamic;
+//------------------------------------------------------------------------------
+// Menu LCD registers
+//------------------------------------------------------------------------------
+typedef struct
+{
+	u8 pass_user[5];	// Password only digits
+	u8 pass_admin[5];	// Password only digits	
+	u8 password;// Sign of password
+	u8 lang;	// Language of menu 0 - english 1-russian
+//	u8 mode_of_controller;	//0 - auto; 1-Summer; 2-Winter
+//	u8 mode_of_operation;	//0 - stop; 1-auto; 2-manual	
+	TCTime Time;
+	TCTime Time_Summ;
+	TCTime Time_Wint;	
+	u8 Season;	// 0 Summer 1 winter
+	u8 id;
+	u8 reserve[3];
+}TMenuRegisters;
+//------------------------------------------------------------------------------
+// Errors record
+//------------------------------------------------------------------------------
+typedef struct
+{
+	s16	code;
+	TCTime time;
+}TError_msg;
+//------------------------------------------------------------------------------
+typedef struct
+{
+	TError_msg item[MAX_ERRORS_NUM];
+}TErrors;
+//------------------------------------------------------------------------------
+// PID
+//------------------------------------------------------------------------------
+#define NUM_INT		10
+#define NUM_SEC		30
+#define NUM_MIN		60
+//#define NUM_HOUR	24
+//------------------------------------------------------------------------------
+#define PID_MODE_STOP		0
+#define PID_MODE_AUTO		1
+#define PID_MODE_ERROR		2
+#define PID_MODE_WARNING	3
+//------------------------------------------------------------------------------
+typedef enum {
+  pid_Winter,
+  pid_Summer,
+}PID_SEASON;
+//------------------------------------------------------------------------------
+typedef struct
+{
+//	u8 tmp;
+	u8 channel;		// number of AI as input
+	s16	p;			// proportional
+	s16	i;			// integral
+	s16	d;			// differential cofficient
+	s16	t0;			// Desired temperature
+	s16	power;		// output of pid
+	s16 power_min;	// limitation of power
+	s16 power_max;	// limitation of power
+	u8 mode;		//0-disable 1-enable
+	u16	ti;			// period of integration in sec	
+	u16	t3max;		// period of servoprivod full cycle in sec		
+	s16	p3;			// output of pid
+	u8 open;
+	u8 close;
+	f32 PID_POWER_STEP[2];	
+}TPID;
+//------------------------------------------------------------------------------
+typedef  struct
+{
+	TPID p[NUM_PID];
+}TPID_STRUCT;
+//------------------------------------------------------------------------------
+typedef struct
+{
+//	s16	tm[NUM_MIN];		// memory	min
+	s16	ts[NUM_SEC];		// memory	sec	
+	s16	ti[NUM_INT];		// memory	smples during second
+	u8	cs,cm,ch,ci;		// counters	
+}TIntMem;
+//------------------------------------------------------------------------------
+// Parameters record
+//------------------------------------------------------------------------------
+#define PARAM_LOCATION 0x00
+#define TPARAM_WIDTH sizeof(TParam)
+//------------------------------------------------------------------------------
+typedef struct
+{
+	TIO io;
+	TPID pid[NUM_PID];	
+	TMenuRegisters menu;	
+	TErrors errors;		
+	u16 CRC;
+}TParam;
+//------------------------------------------------------------------------------
+#endif
+

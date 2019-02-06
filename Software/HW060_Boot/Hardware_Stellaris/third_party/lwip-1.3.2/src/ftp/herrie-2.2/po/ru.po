@@ -1,0 +1,251 @@
+# translation of herrie.pot to Russian
+# This file is distributed under the same license as the herrie package.
+# Copyright (C) 2007 Moroz Sergey L. <se.seam@gmail.com>
+# Moroz Sergey L. <se.seam@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: herrie\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-14 18:16+0200\n"
+"PO-Revision-Date: 2007-11-01 22:32+0200\n"
+"Last-Translator: Moroz Sergey L. <se.seam@gmail.com>\n"
+"Language-Team:  <se.seam@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: audio_output_alsa.c:151 audio_output_ao.c:116 audio_output_coreaudio.c:199
+#: audio_output_pulse.c:77
+msgid "Cannot open the audio device."
+msgstr "Невозможно открыть звуковое устройство."
+
+#: audio_output_alsa.c:169 audio_output_coreaudio.c:226 audio_output_oss.c:123
+msgid "Sample rate or amount of channels not supported."
+msgstr "Частота сэмпла или число каналов не поддерживаются."
+
+#: audio_output_oss.c:72
+#, c-format
+msgid "Cannot open audio device \"%s\".\n"
+msgstr "Невозможно открыть звуковое устройство \"%s\".\n"
+
+#: gui_browser.c:79
+msgid "filter"
+msgstr ""
+
+#: gui_browser.c:145
+msgid "Unable to open initial directory."
+msgstr "Нет доступа к исходному каталогу."
+
+#: gui_browser.c:252
+msgid "Unable to enter the parent directory."
+msgstr "Нет доступа к родительскому каталогу."
+
+#: gui_browser.c:284
+msgid "Unable to enter the selected directory."
+msgstr "Нет доступа к выбранному каталогу."
+
+#: gui_browser.c:370
+msgid "Change directory"
+msgstr "Сменить каталог"
+
+#: gui_browser.c:408
+msgid "Unable to display the file or directory."
+msgstr "Невозможно отобразить файл или каталог."
+
+#: gui_browser.c:425
+msgid "Write playlist to file"
+msgstr "Записать список воспроизведения в файл"
+
+#: gui_browser.c:434
+msgid "Unable to write playlist."
+msgstr "Невозможно записать список воспроизведения."
+
+#: gui_input.c:104
+msgid "Use kill(1) to quit."
+msgstr "Используйте kill(1) для выхода."
+
+#: gui_input.c:108
+#, c-format
+msgid "Quit %s?"
+msgstr "Покинуть %s?"
+
+#: gui_input.c:192
+msgid "Search for"
+msgstr "Поиск"
+
+#: gui_input.c:198
+msgid "Bad pattern."
+msgstr "Неверный шаблон."
+
+#: gui_input.c:245 gui_input.c:282
+msgid "Not found."
+msgstr "Не найден."
+
+#: gui_input.c:358
+msgid "Jump to position"
+msgstr "Перейти к позиции"
+
+#: gui_input.c:414
+msgid "Bad time format."
+msgstr "Неверный формат времени."
+
+#: gui_input.c:612 main.c:75 main.c:81 main.c:87
+msgid "yes"
+msgstr "да"
+
+#: gui_input.c:613 main.c:77 main.c:83 main.c:89
+msgid "no"
+msgstr "нет"
+
+#: gui_playq.c:109
+msgid "Idle"
+msgstr "Задержка"
+
+#: gui_playq.c:112
+msgid "Paused"
+msgstr "Пауза"
+
+#: gui_playq.c:114
+msgid "Playing"
+msgstr "Воспроизведение"
+
+#: gui_playq.c:352
+msgid "Remove all songs from the playlist?"
+msgstr "Удалить все композиции из списка?"
+
+#: gui_playq.c:363
+msgid "Randomize the playlist?"
+msgstr "Перемешать список?"
+
+#: gui_playq.c:412 gui_playq.c:450
+msgid "The song is already at the top of the playlist."
+msgstr "Композиция уже в начале списка."
+
+#: gui_playq.c:431 gui_playq.c:469
+msgid "The song is already at the bottom of the playlist."
+msgstr "Композиция уже в конце списка."
+
+#: gui_playq.c:526
+msgid "Failed to adjust the volume."
+msgstr "Невозможно прибавить громкость."
+
+#: gui_playq.c:528
+#, c-format
+msgid "Volume: %d%%"
+msgstr "Громкость: %d%%"
+
+#: gui_vfslist.c:264
+msgid "There are no songs."
+msgstr "Здесь нет композиций."
+
+#: gui_vfslist.c:335
+msgid "You are at the first song."
+msgstr "Вы на первой композиции."
+
+#: gui_vfslist.c:360
+msgid "You are at the last song."
+msgstr "Вы на последней композиции."
+
+#: gui_vfslist.c:586
+msgid "Search wrapped to top."
+msgstr "Поиск достиг начала."
+
+#: gui_vfslist.c:610
+msgid "Full pathname"
+msgstr "Полный путь"
+
+#: main.c:71
+msgid "Global configuration file"
+msgstr "Файл глобальной конфигурации"
+
+#: main.c:72
+msgid "Audio output"
+msgstr "Аудио-выход"
+
+#: main.c:73
+msgid "Support for AudioScrobbler"
+msgstr "Поддержка AudioScrobbler"
+
+#: main.c:79
+msgid "Support for HTTP streams"
+msgstr "Поддержка HTTP-потоков"
+
+#: main.c:85
+msgid "Support for XSPF playlists (`spiff')"
+msgstr "Поддержка XSPF-списков (`spiff')"
+
+#: main.c:91
+msgid "Supported audio file formats"
+msgstr "Поддерживаемые форматы звуковых файлов"
+
+#: main.c:103
+msgid "usage"
+msgstr "использование"
+
+#: playq.c:195
+#, c-format
+msgid "Failed to open \"%s\" for playback."
+msgstr "Невозможно открыть \"%s\" для воспроизведения"
+
+#: playq.c:426
+#, c-format
+msgid "Repeat: %s"
+msgstr "Повтор %s"
+
+#: playq.c:427
+msgid "on"
+msgstr "вкл"
+
+#: playq.c:427
+msgid "off"
+msgstr "выкл"
+
+#: scrobbler.c:483
+msgid "Failed to authorize at AudioScrobbler."
+msgstr "Невозможно авторизоваться на AudioScrobbler."
+
+#: scrobbler.c:487
+msgid "Invalid AudioScrobbler username/password."
+msgstr "Неверные логин/пароль AudioScrobbler."
+
+#: scrobbler.c:492
+msgid "Successfully authorized at AudioScrobbler."
+msgstr "Успешно авторизован на AudioScrobbler."
+
+#: scrobbler.c:509
+msgid "Successfully sent 1 song to AudioScrobbler."
+msgstr "Успешно отослана 1 композиция на AudioScrobbler."
+
+#: scrobbler.c:513
+#, c-format
+msgid "Successfully sent %d songs to AudioScrobbler."
+msgstr "Успешно отослано %d композиций на AudioScrobbler."
+
+#: scrobbler.c:519
+msgid "Failed to submit songs to AudioScrobbler."
+msgstr "Невозможно передать композиции на AudioScrobbler."
+
+#: vfs.c:202
+#, c-format
+msgid "Unknown user: %s\n"
+msgstr "Неизвестный пользователь: %s\n"
+
+#: vfs.c:216
+#, c-format
+msgid "Unable to chroot in %s\n"
+msgstr "Невозможно chroot в %s\n"
+
+#: vfs.c:225
+#, c-format
+msgid "Unable to change to group %d\n"
+msgstr "Невозможно сменить на группу %d\n"
+
+#: vfs.c:229
+#, c-format
+msgid "Unable to change to user %d\n"
+msgstr "Невозможно сменить на пользователя %d\n"
+
+#: vfs_http.c:146
+#, c-format
+msgid "Connection with \"%s\" lost."
+msgstr "Соединение с \"%s\" потеряно."

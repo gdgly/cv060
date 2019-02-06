@@ -1,0 +1,23 @@
+1.  The mistake linked with saving parameters					[DONE]
+
+2.  Dynamic blocks								[NO]
+
+3.  Increase number of registers						[DONE]
+
+4.  Internet issue (MAC addresses were corrected)				[DONE]
+
+5.  Bootloader must be correcteda ccording last changes in main file		[NO]
+
+6.  Parameters saving must be corrected in order to have backup folder 
+	and back up parameters. Moreover 2 store commands must be
+	updated and look like "store params" "store backup"			[NO]
+
+7.  Internet registers for sharing parameters among controllers  		[NO]
+
+8.  PCB must be correced in order to support extension boards			[NO]
+
+9.  3 points valve sapport must be corrected					[NO]
+
+10. PCB must be corrected to protect FRAM from noise				[NO]
+
+11. There is problem in compatibility of RS485 and Ethernet 			[NO]

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Project>
+  <Desktop>
+    <Static>
+      <Debug-Log>
+        
+        
+      <ColumnWidth0>20</ColumnWidth0><ColumnWidth1>1454</ColumnWidth1></Debug-Log>
+      <Build>
+        <ColumnWidth0>20</ColumnWidth0>
+        <ColumnWidth1>1090</ColumnWidth1>
+        <ColumnWidth2>290</ColumnWidth2>
+        <ColumnWidth3>72</ColumnWidth3>
+      </Build>
+      <Workspace>
+        <ColumnWidths>
+          
+          
+          
+          
+        <Column0>264</Column0><Column1>27</Column1><Column2>27</Column2><Column3>27</Column3></ColumnWidths>
+      </Workspace>
+      <Disassembly>
+        <col-names>
+          
+          
+        <item>Disassembly</item><item>_I0</item></col-names>
+        <col-widths>
+          
+          
+        <item>500</item><item>20</item></col-widths>
+        <DisasmHistory/>
+        
+        
+      <ShowCodeCoverage>0</ShowCodeCoverage><ShowInstrProfiling>0</ShowInstrProfiling></Disassembly>
+      <WATCH_1>
+        <expressions>
+          
+          
+        <item>CV_Buff</item><item>st</item><item>mdate</item><item>mtime</item><item>i2c_timer</item><item>DelayTime</item><item/></expressions>
+        <col-names>
+          
+          
+          
+          
+        <item>Expression</item><item>Location</item><item>Type</item><item>Value</item></col-names>
+        <col-widths>
+          
+          
+          
+          
+        <item>100</item><item>150</item><item>100</item><item>100</item></col-widths>
+      </WATCH_1>
+    <Find-in-Files><ColumnWidth0>515</ColumnWidth0><ColumnWidth1>73</ColumnWidth1><ColumnWidth2>883</ColumnWidth2></Find-in-Files><Locals><col-names><item>Location</item><item>Type</item><item>Value</item><item>Variable</item></col-names><col-widths><item>150</item><item>100</item><item>200</item><item>100</item></col-widths></Locals></Static>
+    <Windows>
+      
+      
+      
+      
+    <Wnd1>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-20845-32249</Identity>
+            <TabName>Debug Log</TabName>
+            <Factory>Debug-Log</Factory>
+            <Session/>
+          </Tab>
+          <Tab>
+            <Identity>TabID-20322-32258</Identity>
+            <TabName>Build</TabName>
+            <Factory>Build</Factory>
+            <Session/>
+          </Tab>
+        <Tab><Identity>TabID-6466-20321</Identity><TabName>Find in Files</TabName><Factory>Find-in-Files</Factory><Session/></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd1><Wnd2>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-31593-32252</Identity>
+            <TabName>Workspace</TabName>
+            <Factory>Workspace</Factory>
+            <Session>
+              
+            <NodeDict><ExpandedNode>&lt;ws&gt;</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060_05</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060_05/Hardware</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060_05/System</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060_05/System/IO_Expander</ExpandedNode><ExpandedNode>&lt;ws&gt;/CV060_05/System/RS485_Slave</ExpandedNode></NodeDict></Session>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd2><Wnd6>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-9574-32255</Identity>
+            <TabName>Disassembly</TabName>
+            <Factory>Disassembly</Factory>
+            <Session/>
+          </Tab>
+        </Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd6><Wnd7>
+        <Tabs>
+          <Tab>
+            <Identity>TabID-14102-9661</Identity>
+            <TabName>Watch 1</TabName>
+            <Factory>WATCH_1</Factory>
+          </Tab>
+        <Tab><Identity>TabID-18684-14457</Identity><TabName>Locals</TabName><Factory>Locals</Factory></Tab></Tabs>
+        
+      <SelectedTab>0</SelectedTab></Wnd7></Windows>
+    <Editor>
+      
+      
+      
+      
+    <Pane><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\controller_data_define.h</Filename><XPos>0</XPos><YPos>30</YPos><SelStart>1735</SelStart><SelEnd>1743</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\Indication\indication.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>279</SelStart><SelEnd>296</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\Pid\pid.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>204</SelStart><SelEnd>204</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\TMP441\TMP441.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>130</SelStart><SelEnd>130</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\main.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>454</SelStart><SelEnd>454</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060\Hardware\io.h</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>212</SelStart><SelEnd>212</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\I2C\i2c.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>732</SelStart><SelEnd>732</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\Valve_3t\valve_3t.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>0</SelStart><SelEnd>0</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\define.h</Filename><XPos>0</XPos><YPos>27</YPos><SelStart>2018</SelStart><SelEnd>2028</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\io.c</Filename><XPos>0</XPos><YPos>482</YPos><SelStart>14706</SelStart><SelEnd>14706</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\Indication\indication.c</Filename><XPos>0</XPos><YPos>28</YPos><SelStart>1387</SelStart><SelEnd>1387</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\Compiler2\compiler2_math.c</Filename><XPos>0</XPos><YPos>182</YPos><SelStart>5198</SelStart><SelEnd>5198</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\Compiler2\compiler2.c</Filename><XPos>0</XPos><YPos>51</YPos><SelStart>2468</SelStart><SelEnd>2468</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\MCP23016\MCP23016.c</Filename><XPos>0</XPos><YPos>0</YPos><SelStart>196</SelStart><SelEnd>196</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\Timer\timer16_test.c</Filename><XPos>0</XPos><YPos>27</YPos><SelStart>1331</SelStart><SelEnd>1331</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\main_stellaris.c</Filename><XPos>0</XPos><YPos>310</YPos><SelStart>8856</SelStart><SelEnd>8856</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\functions.c</Filename><XPos>0</XPos><YPos>320</YPos><SelStart>9445</SelStart><SelEnd>9445</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\enet_io.c</Filename><XPos>0</XPos><YPos>716</YPos><SelStart>24448</SelStart><SelEnd>24448</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\Memory\fram31xx.c</Filename><XPos>0</XPos><YPos>255</YPos><SelStart>6842</SelStart><SelEnd>6842</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Custom\HW060_05\System\RS485_Slave\RS485_S_protocol.c</Filename><XPos>0</XPos><YPos>23</YPos><SelStart>1409</SelStart><SelEnd>1409</SelEnd></Tab><Tab><Factory>TextEditor</Factory><Filename>$WS_DIR$\Controller\Hardware_Stellaris\third_party\lwip-1.3.2\src\ftp\ftpd.c</Filename><XPos>0</XPos><YPos>594</YPos><SelStart>15600</SelStart><SelEnd>15600</SelEnd></Tab><ActiveTab>20</ActiveTab></Pane><ActivePane>0</ActivePane><Sizes><Pane><X>1000000</X><Y>1000000</Y></Pane></Sizes><SplitMode>1</SplitMode></Editor>
+    <Positions>
+      
+      
+      
+      
+      
+    <Top><Row0><Sizes><Toolbar-0212ca70><key>iaridepm.enu1</key></Toolbar-0212ca70></Sizes></Row0><Row1><Sizes><Toolbar-073e0290><key>debuggergui.enu1</key></Toolbar-073e0290></Sizes></Row1></Top><Left><Row0><Sizes><Wnd2><Rect><Top>-2</Top><Left>-2</Left><Bottom>591</Bottom><Right>355</Right><x>-2</x><y>-2</y><xscreen>198</xscreen><yscreen>200</yscreen><sizeHorzCX>132708</sizeHorzCX><sizeHorzCY>233100</sizeHorzCY><sizeVertCX>239276</sizeVertCX><sizeVertCY>691142</sizeVertCY></Rect></Wnd2></Sizes></Row0></Left><Right><Row0><Sizes><Wnd6><Rect><Top>-2</Top><Left>-2</Left><Bottom>591</Bottom><Right>116</Right><x>-2</x><y>-2</y><xscreen>198</xscreen><yscreen>200</yscreen><sizeHorzCX>132708</sizeHorzCX><sizeHorzCY>233100</sizeHorzCY><sizeVertCX>79088</sizeVertCX><sizeVertCY>691142</sizeVertCY></Rect></Wnd6></Sizes></Row0><Row1><Sizes><Wnd7><Rect><Top>-2</Top><Left>114</Left><Bottom>591</Bottom><Right>555</Right><x>114</x><y>-2</y><xscreen>200</xscreen><yscreen>200</yscreen><sizeHorzCX>134048</sizeHorzCX><sizeHorzCY>233100</sizeHorzCY><sizeVertCX>295576</sizeVertCX><sizeVertCY>691142</sizeVertCY></Rect></Wnd7></Sizes></Row1></Right><Bottom><Row0><Sizes><Wnd1><Rect><Top>-2</Top><Left>-2</Left><Bottom>198</Bottom><Right>1494</Right><x>-2</x><y>-2</y><xscreen>1496</xscreen><yscreen>200</yscreen><sizeHorzCX>1002681</sizeHorzCX><sizeHorzCY>233100</sizeHorzCY><sizeVertCX>132708</sizeVertCX><sizeVertCY>233100</sizeVertCY></Rect></Wnd1></Sizes></Row0></Bottom><Float><Sizes/></Float></Positions>
+  </Desktop>
+</Project>
+
+
